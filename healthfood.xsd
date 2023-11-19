@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="components">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Carbohydrate"/>
+        <xs:element ref="Protein"/>
+        <xs:element ref="Fat"/>
+        <xs:element ref="Mineral"/>
+        <xs:element ref="Vitamin"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Carbohydrate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="explain" type="xs:string"/>
+        <xs:element ref="food" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="food">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="name" type="xs:string"/>
+        <xs:element name="description" type="xs:string"/>
+        <xs:element name="effect" type="xs:string"/>
+        <xs:element name="damage" type="xs:string"/>
+        <xs:element name="Example" type="xs:string"/>
+      </xs:sequence>
+      <xs:attribute name="kind" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Protein">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="explain" type="xs:string"/>
+        <xs:element ref="food" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Fat">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="explain" type="xs:string"/>
+        <xs:element ref="food" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Mineral">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="explain" type="xs:string"/>
+        <xs:element ref="food" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Vitamin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="explain" type="xs:string"/>
+        <xs:element ref="food" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
